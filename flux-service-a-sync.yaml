@@ -1,0 +1,27 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: service-a
+  namespace: service-a
+spec:
+  interval: 5m0s
+  url: https://github.com/vincedesjardins/service-a
+  ref:
+    branch: main
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: service-a
+  namespace: service-a
+spec:
+  interval: 5m
+  retryInterval: 30s
+  timeout: 5m
+  path: ./
+  prune: true
+  serviceAccountName: fluxcd
+  sourceRef:
+    kind: GitRepository
+    name: service-a

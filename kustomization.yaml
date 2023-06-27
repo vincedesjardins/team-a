@@ -1,0 +1,3 @@
+resources:
+- ./service-a.yaml
+- ./flux-service-a-sync.yaml
