@@ -4,3 +4,5 @@ metadata:
   name: service-a
   labels:
     team: team-a
+    parent: team-a
+    root: true

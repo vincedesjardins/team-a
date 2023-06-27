@@ -5,7 +5,7 @@ metadata:
   name: service-a
   namespace: service-a
 spec:
-  interval: 5m0s
+  interval: 2m0s
   url: https://github.com/vincedesjardins/service-a
   ref:
     branch: main
@@ -16,7 +16,7 @@ metadata:
   name: service-a
   namespace: service-a
 spec:
-  interval: 5m
+  interval: 2m
   retryInterval: 30s
   timeout: 5m
   path: ./
