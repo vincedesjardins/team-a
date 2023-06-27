@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: service-a
   labels:
-    team: team-b
+    team: team-a
